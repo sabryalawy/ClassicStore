@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classicstore.FXMLDocumentController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="195.0" layoutY="11.0" prefHeight="55.0" prefWidth="290.0" text="HR Page" textAlignment="CENTER">
+         <font>
+            <Font name="System Italic" size="31.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutY="159.0" prefHeight="379.0" prefWidth="759.0" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="159.0">
+         <columns>
+            <TableColumn fx:id="EPID" maxWidth="1000.0" prefWidth="76.0" text="ID" />
+            <TableColumn fx:id="FnameTC" prefWidth="91.0" resizable="false" text="Firstname" />
+            <TableColumn fx:id="LnameTC" prefWidth="195.0" text="Last Name" />
+            <TableColumn fx:id="joptitTC" maxWidth="3000.0" prefWidth="151.0" text="Jop Title" />
+            <TableColumn fx:id="addressTC" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="PhoneTC" maxWidth="218.0" prefWidth="218.0" resizable="false" text="Phone Number" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="Insertbt" layoutX="512.0" layoutY="552.0" mnemonicParsing="false" onAction="#Insertbtact" prefHeight="34.0" prefWidth="233.0" text="Insert Employee" />
+      <Button fx:id="Updatebt" layoutX="297.0" layoutY="552.0" mnemonicParsing="false" onAction="#Updatebtonact" prefHeight="34.0" prefWidth="87.0" text="UPDATE" />
+      <Button fx:id="Deletebt" layoutX="408.0" layoutY="552.0" mnemonicParsing="false" onAction="#Deletebtonact" prefHeight="34.0" prefWidth="87.0" text="Delete" />
+      <Label fx:id="Oprations" layoutX="101.0" layoutY="66.0" prefHeight="17.0" prefWidth="149.0" />
+      <Button fx:id="backbt" layoutX="44.0" layoutY="552.0" mnemonicParsing="false" onAction="#backbtonact" prefHeight="34.0" prefWidth="77.0" text="Back" />
+      <TextField fx:id="SearchTX" layoutX="8.0" layoutY="115.0" onKeyTyped="#SearchTXonrel" promptText="Search" />
+   </children>
+</AnchorPane>

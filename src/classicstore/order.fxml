@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="847.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classicstore.OrderController">
+   <children>
+      <Button fx:id="backBTN" layoutX="22.0" layoutY="523.0" mnemonicParsing="false" onAction="#back" text="back" />
+      <Button fx:id="showOrdersBTN" layoutX="89.0" layoutY="523.0" mnemonicParsing="false" onAction="#showOrders" prefHeight="25.0" prefWidth="97.0" text="show orders" />
+      <Button fx:id="makeOrderBTN" layoutX="692.0" layoutY="523.0" mnemonicParsing="false" onAction="#makeOrder" text="make order" />
+      <TableView fx:id="tableSelected" layoutX="463.0" layoutY="113.0" prefHeight="402.0" prefWidth="370.0">
+         <columns>
+            <TableColumn fx:id="OProductBrand" prefWidth="83.0" text="Brand" />
+            <TableColumn fx:id="OProductSize" prefWidth="62.0" text="Size" />
+            <TableColumn fx:id="OProductPrice" prefWidth="83.0" text="Price" />
+            <TableColumn fx:id="OProductBarcode" prefWidth="75.0" text="Barcode" />
+            <TableColumn fx:id="OProductQuantity" prefWidth="66.0" text="Quantity" />
+         </columns>
+      </TableView>
+      <TextField fx:id="searchTX" layoutX="20.0" layoutY="59.0" onKeyTyped="#SearchTXonrel" promptText="Search" />
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="58.0" text="search as:" />
+      <CheckBox layoutX="84.0" layoutY="18.0" mnemonicParsing="false" text="Brand" />
+      <CheckBox layoutX="155.0" layoutY="18.0" mnemonicParsing="false" text="Size" />
+      <CheckBox layoutX="218.0" layoutY="18.0" mnemonicParsing="false" text="price" />
+      <CheckBox layoutX="284.0" layoutY="18.0" mnemonicParsing="false" text="Barcode" />
+      <Button fx:id="moveToOrder" layoutX="407.0" layoutY="302.0" mnemonicParsing="false" onAction="#moveToTable" text="&gt;&gt;" />
+      <TableView fx:id="tableAll" layoutX="12.0" layoutY="113.0" prefHeight="402.0" prefWidth="370.0">
+         <columns>
+            <TableColumn fx:id="productBrand" prefWidth="83.0" text="Brand" />
+            <TableColumn fx:id="productSize" prefWidth="62.0" text="Size" />
+            <TableColumn fx:id="productPrice" prefWidth="83.0" text="Price" />
+            <TableColumn fx:id="productBarcode" prefWidth="75.0" text="Barcode" />
+            <TableColumn fx:id="productQuantity" prefWidth="66.0" text="Quantity" />
+         </columns>
+      </TableView>
+      <TextField fx:id="quantityTxt" layoutX="381.0" layoutY="542.0" prefHeight="1.0" prefWidth="86.0" />
+      <Label layoutX="327.0" layoutY="546.0" text="quantity" />
+      <Button fx:id="moveToProducts" layoutX="408.0" layoutY="341.0" mnemonicParsing="false" onAction="#moveBack" prefHeight="25.0" prefWidth="33.0" text="&lt;&lt;" />
+   </children>
+</AnchorPane>
